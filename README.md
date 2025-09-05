@@ -9,8 +9,6 @@ Send **local notifications on iOS** directly from Rust, powered by [swift-rs](ht
 ⚠️ **Platform support**: This crate works **only on iOS**.  
 Android or other platforms are **not supported**.
 
----
-
 ## ✨ Features
 
 - Request notification permissions (default or with fine-grained options).
@@ -18,8 +16,6 @@ Android or other platforms are **not supported**.
 - Clear pending or delivered notifications.
 - Remove notifications by identifier.
 - Retrieve lists of pending or delivered notifications.
-
----
 
 ## 📦 Installation
 
