@@ -1,29 +1,3 @@
-//! # ios_local_notification
-//!
-//! `ios_local_notification` provides a safe Rust interface for scheduling,
-//! managing, and clearing local notifications on **iOS**.
-//!
-//! This crate is a thin wrapper over iOS' native notification APIs
-//! through [`swift-rs`](https://crates.io/crates/swift-rs).
-//!
-//! ⚠️ **Platform support**: Only **iOS** is supported.  
-//! Android support was considered, but not implemented.
-//!
-//! ## Example
-//! ```ignore
-//! use ios_local_notification as notif;
-//!
-//! // Request permission with default options
-//! notif::request_permission_default();
-//!
-//! // Schedule a notification after 5 seconds
-//! notif::schedule("id1", "Hello", "World", 5);
-//!
-//! // Retrieve pending notifications
-//! let pending = notif::pending_notifications();
-//! println!("Pending: {:?}", pending);
-//! ```
-
 /// Permission bitflags for configuring notification permissions.
 ///
 /// Combine them with bitwise OR (`|`) when requesting permissions.
@@ -67,7 +41,7 @@ pub struct NotificationRequest {
 #[cfg(target_os = "ios")]
 mod backend {
     use super::NotificationRequest;
-    use swift_rs::{Int, SRObject, SRObjectArray, SRString, swift};
+    use swift_rs::{swift, Int, SRObject, SRObjectArray, SRString};
 
     #[repr(C)]
     pub struct NotificationRequestFFI {

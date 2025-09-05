@@ -27,7 +27,7 @@ Android or other platforms are **not supported**.
 use ios_local_notification as notif;
 
 fn main() {
-    // Request permission with default options (alert, sound, badge)
+    // Request permission with default options (all perms)
     notif::request_permission_default();
 
     // Or request custom permissions
