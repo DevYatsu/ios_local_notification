@@ -126,14 +126,12 @@ mod backend {
 // ====== Public iOS API ======
 
 /// Request default notification permissions (alert, sound, badge).
-#[cfg(target_os = "ios")]
 pub fn request_permission_default() {
     backend::request_permission_default()
 }
 
 /// Request notification permissions with custom options.
 /// See [`permission`] constants for available flags.
-#[cfg(target_os = "ios")]
 pub fn request_permission(options: i32) {
     backend::request_permission(options)
 }
@@ -144,49 +142,41 @@ pub fn request_permission(options: i32) {
 /// - `title`: Notification title.
 /// - `body`: Notification body text.
 /// - `seconds`: Delay before showing the notification.
-#[cfg(target_os = "ios")]
 pub fn schedule(id: &str, title: &str, body: &str, seconds: isize) {
     backend::schedule(id, title, body, seconds)
 }
 
 /// Schedule a repeating notification at fixed intervals.
-#[cfg(target_os = "ios")]
 pub fn schedule_repeat(id: &str, title: &str, body: &str, seconds: isize) {
     backend::schedule_repeat(id, title, body, seconds)
 }
 
 /// Schedule a notification that displays an image attachment.
-#[cfg(target_os = "ios")]
 pub fn schedule_image(id: &str, title: &str, body: &str, image: &str, seconds: isize) {
     backend::schedule_image(id, title, body, image, seconds)
 }
 
 /// Clear all **pending** notifications (scheduled but not yet delivered).
-#[cfg(target_os = "ios")]
 pub fn clear_all_pending() {
     backend::clear_all_pending()
 }
 
 /// Clear all **delivered** notifications (already shown).
-#[cfg(target_os = "ios")]
 pub fn clear_all_delivered() {
     backend::clear_all_delivered()
 }
 
 /// Remove a notification by its identifier.
-#[cfg(target_os = "ios")]
 pub fn remove_by_id(id: &str) {
     backend::remove_by_id(id)
 }
 
 /// Get a list of all pending notifications.
-#[cfg(target_os = "ios")]
 pub fn pending_notifications() -> Vec<NotificationRequest> {
     backend::pending_notifications()
 }
 
 /// Get a list of all delivered notifications.
-#[cfg(target_os = "ios")]
 pub fn delivered_notifications() -> Vec<NotificationRequest> {
     backend::delivered_notifications()
 }
