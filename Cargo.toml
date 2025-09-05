@@ -16,5 +16,10 @@ exclude = [".github", ".gitignore", "examples/*", "tests/*"]
 
 [dependencies]
 
+
+[target.'cfg(target_os = "ios")'.dependencies]
+swift-rs = "1.0.5"
+
+
 [build-dependencies]
 swift-rs = { version = "1.0.5", features = ["build"] }

@@ -9,6 +9,8 @@ Send **local notifications on iOS** directly from Rust, powered by [swift-rs](ht
 ⚠️ **Platform support**: This crate works **only on iOS**.  
 Android or other platforms are **not supported**.
 
+> NOTE: notifications do not work in the IOS Simulator
+
 ## ✨ Features
 
 - Request notification permissions (default or with fine-grained options).
