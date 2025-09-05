@@ -1,0 +1,20 @@
+[package]
+name = "ios_local_notification"
+version = "0.1.0"
+edition = "2021"
+description = "Send local notifications on iOS."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/DevYatsu/ios_local_notification"
+documentation = "https://docs.rs/ios_local_notification"
+homepage = "https://github.com/DevYatsu/ios_local_notification"
+readme = "README.md"
+keywords = ["ios", "notification", "swift", "local", "bindings"]
+categories = ["api-bindings", "os::macos-apis", "development-tools::ffi"]
+authors = ["Yanis Amani <dev.yatsu@gmail.com>"]
+rust-version = "1.75"
+exclude = [".github", ".gitignore", "examples/*", "tests/*"]
+
+[dependencies]
+
+[build-dependencies]
+swift-rs = { version = "1.0.5", features = ["build"] }
